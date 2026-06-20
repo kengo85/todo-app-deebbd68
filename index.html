@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Todo App</h1>
+        <div class="input-area">
+            <input type="text" id="todoInput" placeholder="新しいタスクを入力..." autocomplete="off">
+            <button id="addBtn" onclick="addTodo()">追加</button>
+        </div>
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all" onclick="filterTodos('all')">すべて</button>
+            <button class="filter-btn" data-filter="active" onclick="filterTodos('active')">未完了</button>
+            <button class="filter-btn" data-filter="completed" onclick="filterTodos('completed')">完了済み</button>
+        </div>
+        <div class="stats">
+            <span id="stats"></span>
+            <button id="clearCompleted" onclick="clearCompleted()">完了済みを削除</button>
+        </div>
+        <ul id="todoList"></ul>
+        <p class="empty-message" id="emptyMessage">タスクがありません 🎉</p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
